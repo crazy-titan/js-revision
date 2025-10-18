@@ -69,3 +69,31 @@ console.log(score2);
 
 
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// two type of memory Stack(Primitive, only change in copies) and Heap(Non-Primitive, change in reference)
+
+// STACK 
+let userOne = "crazy@gmail.com";
+let userTwo = userOne;
+
+userTwo = "okay@gmail.com";
+
+// here userTwo will get copies of userOne, so changes will be in copies not in original userOne file
+console.log((userOne));   // "crazy@gmail.com"
+console.log((userTwo));   // "okay@gamil.com"
+
+// HEAP
+let myUserOne = {
+    emailID : "hello@gmail.com",
+    upi: "user@ybl"
+}
+let myUserTwo = myUserOne;
+
+// now access the objects propery using . and change the value
+myUserTwo.emailID = "hahaha@gmail.com";
+
+console.log(myUserOne);  //"hahaha@gmail.com"
+console.log(myUserTwo);  //"hahaha@gmail.com"
+
+// both place the value gets changes because heap gives the reference directly.
