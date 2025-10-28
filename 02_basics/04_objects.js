@@ -89,3 +89,57 @@ console.log(Object.entries(myObj2));
 
 console.log(Object.hasOwnProperty("name"));  // will give boolean values --> true
 console.log(Object.hasOwnProperty("xyz"));  // will give boolean values --> false
+
+
+
+
+// OBJECT Destructuring
+
+const user = {
+    name: "hehehe",
+    course: "js",
+    courseInstructor: "me"
+}
+// lets suppose i want to use the courseInstructor many time
+// user.courseInsturctor we can use this, but can't write this long again and again
+// hence we do destructor of objects
+
+const {courseInstructor} = user;
+
+// now just use courseInstructor
+console.log(courseInstructor); // will output as 'me'
+
+// but lets suppose you want to minimise the size or customise the name
+
+const {courseInstructor: hahaha} = user;
+console.log(hahaha); // will also give you 'me'
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////               +++++++++++           API            ++++++++++            ???????????
+
+
+// api is apna kaam kisi ko thoop do , hehehhehe
+// backend se kuch data aayege api se, wo xml m hota tha pehle ab json m hota
+
+// how json looks?
+
+// {
+//     "name" : "hello",
+//     "age" : "23",
+//     "location" : "India"
+// }
+
+// everything is in double quotes
+
+// we also get in array of objects
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
+
+// we will see all these later , we will also make our own api
