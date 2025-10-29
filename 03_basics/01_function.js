@@ -91,3 +91,54 @@ function greetings(username = "hehehe"){
 }
 
 // note : everything after return syntax can't executed 
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// making shopping cart
+
+function myCart(cart1){
+    return cart1;
+}
+console.log(myCart(50));
+console.log(myCart(50,37,500)); // this is the list of item price but output will be just 50
+
+// how to tackle this situations?
+// we have to use the spread or REST operater again here. '...'
+
+function finalMyCartItems(...cartFinal){
+    return cartFinal;
+}
+console.log(30,50,33,452); // now output will show all the values
+
+// One more intresting thing people use is this...
+function MyCartItems(val1,val2,...cartFinal){
+    return cartFinal;
+}
+console.log(MyCartItems(100,200,48,59,4000)); // [48,59,4000] will give you the array and you can use loops now.
+
+
+
+// now lets take objects as the parameter for a function
+const myObject = {
+    username: "Crazy",
+    age: 21
+}
+
+function argumentAsObject(anyObject){
+    return `${anyObject.username}, i am ${anyObject.age} year old.`
+}
+console.log(argumentAsObject(myObject)); // will give the return as Crazy, i am 21 year old
+// we can also give the whole object directly into the argument of the function.
+console.log(argumentAsObject({username:"Crazy",age:21}));  //will give the return as Crazy, i am 21 year old
+
+
+// now come to the array part, think about the array as parameter.
+const myArray = [100,200,300];
+
+function returnSecondElement(anyArray){
+    return anyArray[1];
+}
+console.log(returnSecondElement(myArray)); // get 200
+// we can also put whole array as an argument.
+console.log(returnSecondElement([100,200,300])); // also get 200
