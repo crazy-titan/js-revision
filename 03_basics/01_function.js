@@ -83,7 +83,7 @@ console.log(greetings()); // this will give hehehe, Hello noobre, because we and
 
 // use the return to come out from the if
 function greetings(username = "hehehe"){
-    if(username === undefined){
+    if(!username){
         console.log("Please,enter your argument");
         return //nothing to return just end here
     }
