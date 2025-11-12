@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Document Object Model)</title>
+</head>
+<body style = "background-color: black; color: white;">
+    <div class = "parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">WednesDay</div>
+        <div class="day">Thrusday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    // console.log(parent);
+
+    // console.log(parent.children); // gives HTML colllection hence we can apply for loop...
+
+    // console.log(parent.children[1].innerHTML) // will give Tuesday
+
+    for (let i = 0; i < parent.children.length; i++) {
+        // console.log(parent.children[i]);
+    }
+
+    // console.log(parent.firstElementChild); // will output the first div 'MONDAY'
+    // console.log(parent.lastElementChild); // will output the last div 'THRUSDAY'
+
+
+    const dayOne = parent.querySelector('.day'); // will get the first class with name .day
+    // console.log(dayOne);
+    
+    // console.log(dayOne.parentElement); // will output its parent node.
+
+    // console.log(dayOne.nextSiblingElement); some spelling error , this will actually give the sibling of monday...
+
+    
+    // Now you will get to know how to create the DOM in two.html file, this is just traversing the DOM...
+
+    
+    
+</script>
+</html>
