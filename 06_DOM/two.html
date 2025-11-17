@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | TITAN</title>
+</head>
+<body style = 'background-color: #212121; color: aliceblue;'>
+    <ul class = 'parent'>
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        // add another 'li' using function
+        function addNewLang(newLang){
+            const newLI = document.createElement('li')
+            newLI.innerHTML = newLang; // don't use while optimising
+            document.querySelector('ul').appendChild(newLI);
+        }
+        addNewLang("HTML")
+        addNewLang("Python")
+
+        // go for little optimise technique
+
+        function addNewLangs(newLangs){
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(newLangs));
+
+            document.querySelector('.parent').appendChild(li); // more better way to add
+        }
+        addNewLangs("Ruby");
+
+        // edit
+        const secondLang = document.querySelector('li:nth-child(2)');
+        const li = document.createElement('li');
+        // secondLang.innerHTML = "hello"
+        li.textContent = "hello"
+        secondLang.replaceWith(li); // will change HTML into 'hello'
+
+        // edit 
+        const firstLang = document.querySelector('li:first-child');
+        firstLang.outerHTML = '<li>Typescript</li>'
+
+        // remove
+        const lastli = document.querySelector('li:last-child');
+        lastli.remove()
+
+
+    </script>
+</body>
+</html>
